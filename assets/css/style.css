@@ -636,4 +636,31 @@ width: 160;
   gap: 60px
 }
 
+.process-item{text-align: left;}
+
+.process-item .item-icon {margin-inline: 0;}
+
+.process .grid-list {gap:30px 40px}
+
+/**
+* WORK
+*/
+
+.works .grid-list {grid-template-columns: repeat(3, 1fr);}
+
+/**
+* FOOTER
+*/
+
+.footer-top .container{grid-template-columns: 0.5fr 1fr;}
+
+.footer-bottom .container{
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+}
+.footer-bottom-list{
+  margin-block-start: 0;
+  gap:50px
+}
 }
