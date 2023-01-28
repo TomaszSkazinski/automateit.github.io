@@ -249,26 +249,26 @@ width: 160;
 
 .navbar {
   position: absolute;
-  top: 100%;
+  top: 100px;
   right: 16px;
-  background-color: var(--bg-vivid-violet);
+  background-color: var(--bg-dark-purple);
   color: var(--text-white);
-  padding: 16px 30px;
+  padding: 20px 30px;
   border-radius: var(--radius-24);
-  opacity: 0;
+  opacity: 100%;
   visibility: hidden;
-  transition: 500ms var(--cubic-out);
+  transition: 500ms vazsr(--cubic-out);
   z-index: 1;
 }
 
 .navbar.active {
-  opacity: 85%;
+  opacity: 100%;
   visibility:  visible;
   transform: translateY(-15px);
 }
 
 .navbar-list > li:not(:last-child) {margin-block-end: 5px;}
-.navbar-link{ font-weight:  var(--weight-regular); color: var(--text-white) }
+.navbar-link{ font-weight:  var(--weight-semiBold); color: var(--text-white-alpha-60);}
 
 .overlay{
   position: fixed;
@@ -375,7 +375,12 @@ width: 160;
   margin-inline: auto;
 }
 
-
+.container .btn-primary{
+  margin:auto;
+  padding-inline: 150px;
+  text-align: center;
+  margin-top: 100px;
+}
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -409,7 +414,8 @@ width: 160;
 
 .footer .btn {
   font-size: var(--fontSize-5);
-  padding-inline: 60px;
+  padding-inline: 40px;
+  margin: 0px 0px;
 }
 
 .footer-list{
@@ -433,6 +439,11 @@ width: 160;
   #MEDIA QUERIES
 \*-----------------------------------*/
 
+@media (max-width:574px){
+.container .btn-secondary{
+  display: none;
+}
+}
 /**
 * responsiver for large than 575px screen
 */
@@ -444,7 +455,7 @@ width: 160;
     width: 100%;
     margin-inline: auto;
   }
-
+  .container .btn-secondary{display:all;}
   /* HEADER */
 
   .header .container{
@@ -494,7 +505,9 @@ width: 160;
   .grid-list{
     grid-template-columns: 1fr 1fr;
   }
-
+  .input-wrapper .btn-primary{
+    padding-inline: 50px;
+  }
   .btn-secondary{
     color: var(--text-white);
     height: 52px;
@@ -599,7 +612,7 @@ width: 160;
     gap:40px;
   }
 
-  .navbar-list > li:not(:last-child) {margin-block-end: 0;};
+  .navbar-list > li:not(:last-child) {margin-block-end: 0;}
   .navbar-link{
     color: var(--text-white);
     transition: var(--transition-1);
@@ -655,6 +668,7 @@ width: 160;
   display: flex;
   justify-content:space-between ;
   align-items: center;
+  text-align: left;
 }
 .footer-bottom-list{
   margin-block-start: 0;
