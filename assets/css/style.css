@@ -168,6 +168,7 @@ body.nav-active {overflow: hidden;}
 .h3{
   font-size: var(--fontSize-3);
   font-weight: var(--weight-regular);
+  padding-block-start: 20px;
 }
 
 .btn{
@@ -261,7 +262,7 @@ width: 160;
 }
 
 .navbar.active {
-  opacity: 1;
+  opacity: 85%;
   visibility:  visible;
   transform: translateY(-15px);
 }
@@ -274,7 +275,7 @@ width: 160;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   pointer-events: none;
 }
 .overlay.active {
@@ -324,6 +325,7 @@ width: 160;
 
 .process-banner {display: none;}
 .process{
+  padding-block-start: 80px;
   position: relative;
   z-index: 1;
 }
@@ -449,6 +451,14 @@ width: 160;
     max-width: unset;
     padding-inline-end: 50px; 
   }
+  .btn-secondary{
+    color: var(--text-white);
+    height: 52px;
+    border: 2px solid var(--border-blue-jeans);
+    padding-inline: 30px;
+  }
+
+  .btn-secondary:is(:hover, :focus-visible) {background-color: var(--bg-blue-jeans)}
 }
 
 /**
@@ -610,5 +620,20 @@ width: 160;
   align-items: center;
 }
 
+/**
+* PROCESS
+*/
+
+.process-banner{
+  display: block;
+  max-width: 540px;
+  margin-inline: auto;
+}
+.process .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px
+}
 
 }
