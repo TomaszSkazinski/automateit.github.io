@@ -459,6 +459,7 @@ width: 160;
   }
 
   .btn-secondary:is(:hover, :focus-visible) {background-color: var(--bg-blue-jeans)}
+  
 }
 
 /**
@@ -624,16 +625,105 @@ width: 160;
 * PROCESS
 */
 
-.process-banner{
-  display: block;
-  max-width: 540px;
-  margin-inline: auto;
-}
+
 .process .wrapper {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 60px
 }
 
+.process-item{text-align: left;}
+
+.process-item .item-icon {margin-inline: 0;}
+
+.process .grid-list {gap:30px 40px}
+
+/**
+* WORK
+*/
+
+.work .grid-list {grid-template-columns: repeat(3, 1fr);}
+
+/**
+* FOOTER
+*/
+
+.footer-top .container{grid-template-columns: 0.5fr 1fr;}
+
+.footer-bottom .container{
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+}
+.footer-bottom-list{
+  margin-block-start: 0;
+  gap:50px
+}
+}
+
+
+/**
+* responsiver for large than 1200px screen
+*/
+
+@media (min-width:1200px){
+  /* CUSTOM PROPERTY */
+
+  :root{
+
+    /* TYPOGRAPHY */
+    /* font-size */
+
+    --fontSize-1: 7rem;
+    --fontSize-3:2.8rem;
+  }
+    /**
+    * REUSED STYLE
+    */
+  .container{
+    max-width: 1140px;
+  }
+  .section-text{
+    max-width: 750px;
+  }
+  
+}
+
+/**
+* responsiver for large than 1400px screen
+*/
+
+@media (min-width:1400px){
+/* CUSTOM PROPERTY */
+:root {
+  /**
+  * TYPOGRAPHY
+  */
+  --fontSize-1: 8rem;
+}
+   /**
+  * REUSED STYLE
+  */
+.container {max-width: 1350px;}
+.section-text{margin-block-end: 60px;}
+
+   /**
+  * HERO
+  */
+  .hero-text{
+    font-size: 1.8rem;
+    margin-block: 40px;
+  }
+       /**
+       * PROCESS
+       */
+  .process .wrapper{
+    grid-template-columns: 0.7fr 1fr;
+    gap:130px;
+  }
+
+  .process-item .item-icon {width: 80px;}
+  .process-item .item-title {margin-block: 25pm 15px;}
+  .process .grid-list {row-gap:50px}
 }
